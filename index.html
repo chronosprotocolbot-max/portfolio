@@ -4,320 +4,75 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Krzysztof Helbig | AI Automation Portfolio</title>
-
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #101827;
-      color: #e5e7eb;
-      line-height: 1.6;
-    }
-
-    .container {
-      max-width: 1050px;
-      margin: auto;
-      padding: 70px 24px;
-    }
-
-    .logo {
-      position: absolute;
-      top: 28px;
-      right: 35px;
-      width: 115px;
-      height: auto;
-    }
-
-    .hero {
-      padding: 70px 0 55px;
-      border-bottom: 1px solid #334155;
-    }
-
-    .eyebrow {
-      color: #67e8f9;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 13px;
-      font-weight: bold;
-    }
-
-    h1 {
-      font-size: clamp(42px, 7vw, 76px);
-      line-height: 1.05;
-      margin: 18px 0;
-      color: white;
-    }
-
-    h2 {
-      font-size: 32px;
-      color: white;
-      margin-top: 65px;
-    }
-
-    .intro {
-      max-width: 720px;
-      font-size: 20px;
-      color: #cbd5e1;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 22px;
-    }
-
-    .card {
-      background: #1e293b;
-      border: 1px solid #334155;
-      border-radius: 14px;
-      padding: 26px;
-    }
-
-    .card h3 {
-      color: white;
-      margin-top: 0;
-      font-size: 22px;
-    }
-
-    .card p {
-      color: #cbd5e1;
-    }
-
-    .tags {
-      color: #67e8f9;
-      font-size: 14px;
-    }
-
-    .demo-link {
-      display: inline-block;
-      margin-top: 18px;
-      color: #67e8f9;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .demo-link:hover {
-      color: white;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .skill {
-      background: #164e63;
-      color: #cffafe;
-      padding: 8px 13px;
-      border-radius: 20px;
-      font-size: 14px;
-    }
-
-    footer {
-      margin-top: 75px;
-      padding-top: 25px;
-      border-top: 1px solid #334155;
-      color: #94a3b8;
-    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; background: #101827; color: #e5e7eb; line-height: 1.6; }
+    .container { max-width: 1050px; margin: auto; padding: 70px 24px; }
+    .logo { position: absolute; top: 28px; right: 35px; width: 115px; height: auto; }
+    .hero { padding: 70px 0 55px; border-bottom: 1px solid #334155; }
+    .eyebrow { color: #67e8f9; text-transform: uppercase; letter-spacing: 2px; font-size: 13px; font-weight: bold; }
+    h1 { font-size: clamp(42px, 7vw, 76px); line-height: 1.05; margin: 18px 0; color: white; }
+    h2 { font-size: 32px; color: white; margin-top: 65px; }
+    h3 { color: white; margin-top: 0; font-size: 22px; }
+    h4 { color: #67e8f9; margin-bottom: 6px; }
+    .intro { max-width: 720px; font-size: 20px; color: #cbd5e1; }
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; }
+    .card, details { background: #1e293b; border: 1px solid #334155; border-radius: 14px; padding: 26px; }
+    .card p, details p, details li { color: #cbd5e1; }
+    .tags { color: #67e8f9; font-size: 14px; }
+    a { color: #67e8f9; }
+    .demo-link { display: inline-block; margin-top: 18px; font-weight: bold; text-decoration: none; }
+    .demo-link:hover, a:hover { color: white; }
+    .skills { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skill { background: #164e63; color: #cffafe; padding: 8px 13px; border-radius: 20px; font-size: 14px; }
+    .case-studies { display: grid; gap: 16px; }
+    details { padding: 0; overflow: hidden; }
+    summary { cursor: pointer; list-style: none; padding: 22px 26px; color: white; font-size: 21px; font-weight: bold; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: '+'; float: right; color: #67e8f9; font-size: 25px; line-height: 1; }
+    details[open] summary::after { content: '−'; }
+    .case-content { padding: 0 26px 26px; border-top: 1px solid #334155; }
+    .case-content p { max-width: 850px; }
+    .case-content ul { padding-left: 22px; }
+    .grant-note { background: #172554; border-color: #2563eb; }
+    footer { margin-top: 75px; padding-top: 25px; border-top: 1px solid #334155; color: #94a3b8; }
+    @media (max-width: 620px) { .logo { width: 82px; right: 20px; top: 20px; } .container { padding-top: 48px; } }
   </style>
 </head>
-
 <body>
-
-  <img
-    class="logo"
-    src="BigYeah_AI_logo_transparent.png"
-    alt="Big Yeah AI"
-  >
-
+  <img class="logo" src="BigYeah_AI_logo_transparent.png" alt="Big Yeah AI">
   <main class="container">
-
     <section class="hero">
       <div class="eyebrow">AI Automation Portfolio</div>
-
       <h1>Krzysztof Helbig</h1>
-
-      <p class="intro">
-        I design and build practical automation systems that connect AI,
-        business processes and human decision-making.
-      </p>
+      <p class="intro">I design and build practical automation systems that connect AI, business processes and human decision-making.</p>
     </section>
 
     <section>
       <h2>Selected Projects</h2>
-
       <div class="projects">
-
-        <article class="card">
-          <h3>HR Candidate Sifter</h3>
-
-          <p>
-            AI-assisted CV screening and candidate matching system with
-            recruiter review, scoring and human approval workflows.
-          </p>
-
-          <div class="tags">
-            n8n · Supabase · Appsmith · Google Drive · AI
-          </div>
-
-          <a
-            class="demo-link"
-            href="https://youtu.be/WTIlsj87GBY"
-            target="_blank"
-          >
-            Watch demo →
-          </a>
-        </article>
-
-        <article class="card">
-          <h3>Prospect Finder</h3>
-
-          <p>
-            Automated business research and outreach preparation pipeline
-            with multi-page search, enrichment, deduplication and approval.
-          </p>
-
-          <div class="tags">
-            n8n · Supabase · Appsmith · Google Places · RAG
-          </div>
-
-          <a
-            class="demo-link"
-            href="https://youtu.be/qIJ-rHUYKiM"
-            target="_blank"
-          >
-            Watch demo →
-          </a>
-        </article>
-
-        <article class="card">
-          <h3>AI Leasing CRM</h3>
-
-          <p>
-            CRM workflow for rental inquiries, property matching, viewings,
-            follow-ups and controlled communication.
-          </p>
-
-          <div class="tags">
-            n8n · Supabase · Telegram · Gmail · Appsmith
-          </div>
-
-          <a
-            class="demo-link"
-            href="https://youtu.be/LYclp18RpTA"
-            target="_blank"
-          >
-            Full demo →
-          </a>
-
-          <br>
-
-          <a
-            class="demo-link"
-            href="https://youtu.be/xcE_ONSZuks"
-            target="_blank"
-          >
-            Telegram module →
-          </a>
-        </article>
-
-        <article class="card">
-          <h3>BrightFlow Chatbot</h3>
-
-          <p>
-            Configurable AI intake assistant supporting text, voice,
-            appointment handling and human review.
-          </p>
-
-          <div class="tags">
-            n8n · AI · Google Calendar · Vapi · Supabase
-          </div>
-
-          <a
-            class="demo-link"
-            href="https://youtu.be/f0YvWDyTMvs"
-            target="_blank"
-          >
-            Watch demo →
-          </a>
-        </article>
-
+        <article class="card"><h3>HR Candidate Sifter</h3><p>AI-assisted CV screening and candidate matching with recruiter review, scoring and human approval workflows.</p><div class="tags">n8n · Supabase · Appsmith · Google Drive · AI</div><a class="demo-link" href="https://youtu.be/WTIlsj87GBY" target="_blank">Watch demo →</a></article>
+        <article class="card"><h3>Prospect Finder</h3><p>Automated business research and outreach preparation with multi-page search, enrichment, deduplication and approval.</p><div class="tags">n8n · Supabase · Appsmith · Google Places · RAG</div><a class="demo-link" href="https://youtu.be/qIJ-rHUYKiM" target="_blank">Watch demo →</a></article>
+        <article class="card"><h3>AI Leasing CRM</h3><p>CRM workflow for rental inquiries, property matching, viewings, follow-ups and controlled communication.</p><div class="tags">n8n · Supabase · Telegram · Gmail · Appsmith</div><a class="demo-link" href="https://youtu.be/LYclp18RpTA" target="_blank">Full demo →</a><br><a class="demo-link" href="https://youtu.be/xcE_ONSZuks" target="_blank">Telegram module →</a></article>
+        <article class="card"><h3>BrightFlow Chatbot</h3><p>Configurable AI intake assistant supporting text, voice, appointment handling and human review.</p><div class="tags">n8n · AI · Google Calendar · Vapi · Supabase</div><a class="demo-link" href="https://youtu.be/f0YvWDyTMvs" target="_blank">Watch demo →</a></article>
       </div>
     </section>
 
     <section>
-      <h2>Tools and Technologies</h2>
-
-      <div class="skills">
-        <span class="skill">n8n</span>
-        <span class="skill">Supabase</span>
-        <span class="skill">Appsmith</span>
-        <span class="skill">Make</span>
-        <span class="skill">Python</span>
-        <span class="skill">AI Workflows</span>
-        <span class="skill">RAG</span>
-        <span class="skill">Gmail</span>
-        <span class="skill">Google Drive</span>
-        <span class="skill">Telegram</span>
+      <h2>Project Case Studies</h2>
+      <div class="case-studies">
+        <details><summary>HR Candidate Sifter</summary><div class="case-content"><h4>What it does</h4><p>Collects CVs from Google Drive, prevents duplicate applications, extracts structured candidate data and evaluates each CV against a defined position.</p><h4>Why it matters</h4><p>Recruiters receive traceable scores, confidence information and recommendations in an Appsmith review dashboard instead of manually comparing every document from scratch.</p><h4>Human control</h4><p>The workflow supports recruiter review and communication preparation, but it does not make an automatic hiring decision.</p><h4>Stack</h4><p>n8n · Supabase · Appsmith · Google Drive · Gemini · Gmail</p></div></details>
+        <details><summary>Prospect Finder</summary><div class="case-content"><h4>What it does</h4><p>Searches Google Places across multiple query variants and result pages, checks usage limits, removes duplicates, enriches company records and evaluates evidence against configurable criteria.</p><h4>Why it matters</h4><p>Small businesses and agencies can build a qualified prospect list without repeating the same research manually.</p><h4>Human control</h4><p>Messages are reviewed and approved in Appsmith before approved content becomes a Gmail draft.</p><h4>Stack</h4><p>n8n · Appsmith · Supabase · Google Places · OpenAI · Gmail · optional RAG</p></div></details>
+        <details><summary>AI Leasing CRM</summary><div class="case-content"><h4>What it does</h4><p>Handles rental inquiries, matches requirements with properties, coordinates viewings, schedules follow-ups, requests documents and records won or lost outcomes.</p><h4>Additional module</h4><p>The Telegram assistant can recognise properties from complete or partial screenshots, combine context from additional images and support controlled landlord follow-up.</p><h4>Human control</h4><p>Communication and availability decisions remain with the operator while lead activity and status changes are recorded in Supabase.</p><h4>Stack</h4><p>n8n · Supabase · Appsmith · OpenAI · Gmail · Telegram · Google Calendar</p></div></details>
+        <details><summary>BrightFlow Chatbot</summary><div class="case-content"><h4>What it does</h4><p>Supports website chat, email, Telegram text and voice inputs, maintains conversation context, uses business-specific knowledge and synchronises confirmed appointments with Google Calendar.</p><h4>Why it matters</h4><p>The same core can be configured for clinics, agencies, consultants, property services and other appointment-based organisations.</p><h4>Human control</h4><p>Urgent or sensitive cases can be escalated to a person through email and Telegram alerts, with manual calendar controls built into the workflow.</p><h4>Stack</h4><p>n8n · Supabase · Appsmith · OpenAI · Vapi · Google Calendar · Gmail · Telegram</p></div></details>
       </div>
     </section>
 
-    <section>
-      <h2>Approach</h2>
-
-      <p class="intro">
-        I focus on practical, reviewable systems that support real business
-        processes while keeping important decisions under human control.
-      </p>
-    </section>
-<section>
-  <h2>Contact</h2>
-
-  <p class="intro">
-    I am open to opportunities involving AI automation, workflow design,
-    internal tools and practical business systems.
-  </p>
-<p>
-  <a
-    class="demo-link"
-    href="Krzysztof_Helbig_Automation_CV_Clean.pdf"
-    target="_blank"
-  >
-    Download technical CV →
-  </a>
-</p>
-  <p>
-    <a class="demo-link" href="mailto:bigyeahsystems@proton.me">
-      Email
-    </a>
-    &nbsp;·&nbsp;
-    <a
-      class="demo-link"
-      href="https://www.linkedin.com/in/krzysztof-helbig-53939b33b/"
-      target="_blank"
-    >
-      LinkedIn
-    </a>
-    &nbsp;·&nbsp;
-    <a
-      class="demo-link"
-      href="https://github.com/chronosprotocolbot-max"
-      target="_blank"
-    >
-      GitHub
-    </a>
-  </p>
-</section>
-    <footer>
-      © 2026 Krzysztof Helbig · Gozo, Malta
-    </footer>
-
+    <section><h2>Tools and Technologies</h2><div class="skills"><span class="skill">n8n</span><span class="skill">Supabase</span><span class="skill">Appsmith</span><span class="skill">Make</span><span class="skill">Python</span><span class="skill">AI Workflows</span><span class="skill">RAG</span><span class="skill">Gmail</span><span class="skill">Google Drive</span><span class="skill">Telegram</span><span class="skill">Google Calendar</span><span class="skill">Vapi</span></div></section>
+    <section><h2>Approach</h2><p class="intro">I focus on practical, reviewable systems that support real business processes while keeping important decisions under human control.</p></section>
+    <section class="grant-note"><h2>Building practical systems</h2><p class="intro">These projects share a common approach: connect business inputs, structured data, AI-assisted processing and human review into workflows that can be tested, understood and adapted to different organisations.</p></section>
+    <section><h2>Contact</h2><p class="intro">I am open to opportunities involving AI automation, workflow design, internal tools and practical business systems.</p><p><a class="demo-link" href="Krzysztof_Helbig_Automation_CV_Clean.pdf" target="_blank">Download technical CV →</a></p><p><a class="demo-link" href="mailto:bigyeahsystems@proton.me">Email</a>&nbsp;·&nbsp;<a class="demo-link" href="https://www.linkedin.com/in/krzysztof-helbig-53939b33b/" target="_blank">LinkedIn</a>&nbsp;·&nbsp;<a class="demo-link" href="https://github.com/chronosprotocolbot-max" target="_blank">GitHub</a></p></section>
+    <footer>© 2026 Krzysztof Helbig · Gozo, Malta</footer>
   </main>
-
 </body>
 </html>
