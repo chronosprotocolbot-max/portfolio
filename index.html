@@ -22,6 +22,7 @@
     .tags { color: #67e8f9; font-size: 14px; }
     a { color: #67e8f9; }
     .demo-link { display: inline-block; margin-top: 18px; font-weight: bold; text-decoration: none; }
+    .case-link { display: inline-block; margin-top: 12px; color: #c4b5fd; font-size: 14px; font-weight: bold; text-decoration: none; }
     .demo-link:hover, a:hover { color: white; }
     .skills { display: flex; flex-wrap: wrap; gap: 10px; }
     .skill { background: #164e63; color: #cffafe; padding: 8px 13px; border-radius: 20px; font-size: 14px; }
@@ -51,15 +52,16 @@
     <section>
       <h2>Selected Projects</h2>
       <div class="projects">
-        <article class="card"><h3>HR Candidate Sifter</h3><p>AI-assisted CV screening and candidate matching with recruiter review, scoring and human approval workflows.</p><div class="tags">n8n · Supabase · Appsmith · Google Drive · AI</div><a class="demo-link" href="https://youtu.be/WTIlsj87GBY" target="_blank">Watch demo →</a></article>
-        <article class="card"><h3>Prospect Finder</h3><p>Automated business research and outreach preparation with multi-page search, enrichment, deduplication and approval.</p><div class="tags">n8n · Supabase · Appsmith · Google Places · RAG</div><a class="demo-link" href="https://youtu.be/qIJ-rHUYKiM" target="_blank">Watch demo →</a></article>
-        <article class="card"><h3>AI Leasing CRM</h3><p>CRM workflow for rental inquiries, property matching, viewings, follow-ups and controlled communication.</p><div class="tags">n8n · Supabase · Telegram · Gmail · Appsmith</div><a class="demo-link" href="https://youtu.be/LYclp18RpTA" target="_blank">Full demo →</a><br><a class="demo-link" href="https://youtu.be/xcE_ONSZuks" target="_blank">Telegram module →</a></article>
-        <article class="card"><h3>BrightFlow Chatbot</h3><p>Configurable AI intake assistant supporting text, voice, appointment handling and human review.</p><div class="tags">n8n · AI · Google Calendar · Vapi · Supabase</div><a class="demo-link" href="https://youtu.be/f0YvWDyTMvs" target="_blank">Watch demo →</a></article>
+        <article class="card"><h3>HR Candidate Sifter</h3><p>AI-assisted CV screening and candidate matching with recruiter review, scoring and human approval workflows.</p><div class="tags">n8n · Supabase · Appsmith · Google Drive · AI</div><a class="demo-link" href="https://youtu.be/WTIlsj87GBY" target="_blank">Watch demo →</a><br><a class="case-link" href="#case-studies">Read case study →</a></article>
+        <article class="card"><h3>Prospect Finder</h3><p>Automated business research and outreach preparation with multi-page search, enrichment, deduplication and approval.</p><div class="tags">n8n · Supabase · Appsmith · Google Places · RAG</div><a class="demo-link" href="https://youtu.be/qIJ-rHUYKiM" target="_blank">Watch demo →</a><br><a class="case-link" href="#case-studies">Read case study →</a></article>
+        <article class="card"><h3>AI Leasing CRM</h3><p>CRM workflow for rental inquiries, property matching, viewings, follow-ups and controlled communication.</p><div class="tags">n8n · Supabase · Telegram · Gmail · Appsmith</div><a class="demo-link" href="https://youtu.be/LYclp18RpTA" target="_blank">Full demo →</a><br><a class="demo-link" href="https://youtu.be/xcE_ONSZuks" target="_blank">Telegram module →</a><br><a class="case-link" href="#case-studies">Read case study →</a></article>
+        <article class="card"><h3>BrightFlow Chatbot</h3><p>Configurable AI intake assistant supporting text, voice, appointment handling and human review.</p><div class="tags">n8n · AI · Google Calendar · Vapi · Supabase</div><a class="demo-link" href="https://youtu.be/f0YvWDyTMvs" target="_blank">Watch demo →</a><br><a class="case-link" href="#case-studies">Read case study →</a></article>
       </div>
     </section>
 
     <section>
-      <h2>Project Case Studies</h2>
+      <h2 id="case-studies">Project Case Studies</h2>
+      <p class="intro">Select a project below to see what it does, why it matters and how the workflow keeps important decisions under human control.</p>
       <div class="case-studies">
         <details><summary>HR Candidate Sifter</summary><div class="case-content"><h4>What it does</h4><p>Collects CVs from Google Drive, prevents duplicate applications, extracts structured candidate data and evaluates each CV against a defined position.</p><h4>Why it matters</h4><p>Recruiters receive traceable scores, confidence information and recommendations in an Appsmith review dashboard instead of manually comparing every document from scratch.</p><h4>Human control</h4><p>The workflow supports recruiter review and communication preparation, but it does not make an automatic hiring decision.</p><h4>Stack</h4><p>n8n · Supabase · Appsmith · Google Drive · Gemini · Gmail</p></div></details>
         <details><summary>Prospect Finder</summary><div class="case-content"><h4>What it does</h4><p>Searches Google Places across multiple query variants and result pages, checks usage limits, removes duplicates, enriches company records and evaluates evidence against configurable criteria.</p><h4>Why it matters</h4><p>Small businesses and agencies can build a qualified prospect list without repeating the same research manually.</p><h4>Human control</h4><p>Messages are reviewed and approved in Appsmith before approved content becomes a Gmail draft.</p><h4>Stack</h4><p>n8n · Appsmith · Supabase · Google Places · OpenAI · Gmail · optional RAG</p></div></details>
@@ -68,6 +70,13 @@
       </div>
     </section>
 
+    <section><h2>AI Models and Functions</h2><div class="case-studies">
+      <details><summary>Gemini 3.1 Flash-Lite Preview — HR Candidate Sifter</summary><div class="case-content"><p>Used for job-advert extraction, CV evaluation and candidate-to-position matching. The workflow requests structured JSON containing scores, matched requirements, missing must-haves, red flags, recruiter summary, confidence and recommendation status.</p></div></details>
+      <details><summary>GPT-5 mini — research, web evidence and vision</summary><div class="case-content"><p>Used in Prospect Finder for evidence-based company research, permitted marketplace checks and structured enrichment packets, with controlled web-search calls. Used in the leasing Telegram assistant for visual property recognition from full or partial screenshots and comparison against candidate property images.</p></div></details>
+      <details><summary>GPT-4.1 mini — offer and outreach generation</summary><div class="case-content"><p>Used to turn validated company evidence into an offer, proposal and outreach draft. Separate validation logic checks JSON structure, unsupported claims, uncertainty, message length and approval requirements before a Gmail draft is created.</p></div></details>
+      <details><summary>GPT-4o and GPT-4o mini — leasing and intake workflows</summary><div class="case-content"><p>Used across rental inquiry intake, property matching, follow-ups, viewing management and decision workflows. These steps classify requests, extract structured requirements, prepare responses and support scheduling while leaving external communication and important decisions under human control.</p></div></details>
+      <details><summary>Embeddings and RAG context</summary><div class="case-content"><p>OpenAI embeddings and vector retrieval were used where a workflow needed controlled knowledge-base context. Retrieved evidence was attached to the model input rather than treated as an automatic decision, and RAG could be enabled or disabled per campaign.</p></div></details>
+    </div></section>
     <section><h2>Tools and Technologies</h2><div class="skills"><span class="skill">n8n</span><span class="skill">Supabase</span><span class="skill">Appsmith</span><span class="skill">Make</span><span class="skill">Python</span><span class="skill">AI Workflows</span><span class="skill">RAG</span><span class="skill">Gmail</span><span class="skill">Google Drive</span><span class="skill">Telegram</span><span class="skill">Google Calendar</span><span class="skill">Vapi</span></div></section>
     <section><h2>Approach</h2><p class="intro">I focus on practical, reviewable systems that support real business processes while keeping important decisions under human control.</p></section>
     <section class="grant-note"><h2>Building practical systems</h2><p class="intro">These projects share a common approach: connect business inputs, structured data, AI-assisted processing and human review into workflows that can be tested, understood and adapted to different organisations.</p></section>
